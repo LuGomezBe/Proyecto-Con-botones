@@ -43,6 +43,7 @@
             this.btnVolver = new System.Windows.Forms.Button();
             this.cmbTipoE = new System.Windows.Forms.ComboBox();
             this.btnReset = new System.Windows.Forms.Button();
+            this.txtIdReporte = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquipo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             this.txtId.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(87, 91);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(132, 22);
@@ -61,7 +62,7 @@
             // 
             this.txtMarca.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtMarca.Location = new System.Drawing.Point(376, 209);
-            this.txtMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(132, 22);
             this.txtMarca.TabIndex = 8;
@@ -70,7 +71,7 @@
             // 
             this.txtDescripcion.BackColor = System.Drawing.Color.White;
             this.txtDescripcion.Location = new System.Drawing.Point(29, 318);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(525, 221);
@@ -123,7 +124,7 @@
             this.dgvEquipo.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvEquipo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEquipo.Location = new System.Drawing.Point(587, 135);
-            this.dgvEquipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvEquipo.Margin = new System.Windows.Forms.Padding(4);
             this.dgvEquipo.Name = "dgvEquipo";
             this.dgvEquipo.RowHeadersWidth = 51;
             this.dgvEquipo.Size = new System.Drawing.Size(375, 201);
@@ -134,7 +135,7 @@
             // 
             this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnModificar.Location = new System.Drawing.Point(409, 52);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(100, 36);
             this.btnModificar.TabIndex = 15;
@@ -148,7 +149,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.Location = new System.Drawing.Point(545, 52);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(148, 34);
             this.btnSave.TabIndex = 16;
@@ -163,7 +164,7 @@
             this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClear.Location = new System.Drawing.Point(713, 52);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(116, 34);
             this.btnClear.TabIndex = 17;
@@ -176,7 +177,7 @@
             // 
             this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnVolver.Location = new System.Drawing.Point(900, 52);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(100, 36);
             this.btnVolver.TabIndex = 18;
@@ -193,7 +194,7 @@
             "IMPRESORA",
             "CPU"});
             this.cmbTipoE.Location = new System.Drawing.Point(59, 208);
-            this.cmbTipoE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbTipoE.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTipoE.Name = "cmbTipoE";
             this.cmbTipoE.Size = new System.Drawing.Size(160, 24);
             this.cmbTipoE.TabIndex = 19;
@@ -210,12 +211,20 @@
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // txtIdReporte
+            // 
+            this.txtIdReporte.Location = new System.Drawing.Point(630, 440);
+            this.txtIdReporte.Name = "txtIdReporte";
+            this.txtIdReporte.Size = new System.Drawing.Size(100, 22);
+            this.txtIdReporte.TabIndex = 21;
+            // 
             // Equipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.txtIdReporte);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.cmbTipoE);
             this.Controls.Add(this.btnVolver);
@@ -230,7 +239,7 @@
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.txtId);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Equipo";
             this.Text = "Equipo";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquipo)).EndInit();
@@ -242,7 +251,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -255,5 +263,7 @@
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.ComboBox cmbTipoE;
         private System.Windows.Forms.Button btnReset;
+        public System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.TextBox txtIdReporte;
     }
 }

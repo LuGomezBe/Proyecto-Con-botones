@@ -269,7 +269,6 @@
         private System.Windows.Forms.Label lblDni;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.TextBox txtDni;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtTelefono;
@@ -279,5 +278,6 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnReset;
+        public System.Windows.Forms.TextBox txtDni;
     }
 }

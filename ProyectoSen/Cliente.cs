@@ -66,5 +66,7 @@ namespace ProyectoSen
             objetoCliente.ResetCliente();
             objetoCliente.mostrarCliente(dgvCliente);
         }
+
+       
     }
 }

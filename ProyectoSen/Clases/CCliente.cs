@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -36,7 +37,7 @@ namespace ProyectoSen.Clases
             {
                 CConexion objetoConexion = new CConexion();
 
-                String query = "insert into Cliente (Nombre,Apellidos,Dni,Telefono)" + "values ('" + nombres.Text + "','" + apellidos.Text + "','" + Dni.Text + "','" + telefono.Text +  "');";
+                String query = "insert into Cliente (Nombre_Cliente,Apellidos_Cliente,Dni_Cliente,Telefono)" + "values ('" + nombres.Text + "','" + apellidos.Text + "','" + Dni.Text + "','" + telefono.Text +  "');";
                 MySqlCommand mySqlCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
                 MySqlDataReader reader = mySqlCommand.ExecuteReader();
 
@@ -69,7 +70,7 @@ namespace ProyectoSen.Clases
             {
                 CConexion objetoConexion = new CConexion();
 
-                String query = "update cliente set Nombre='" + nombres.Text + "', Apellidos ='" + apellidos.Text + "', DNI ='" + Dni.Text + "', Telefono ='" + telefono.Text +  "' where ID_Cliente = '" + Id.Text + "';";
+                String query = "update cliente set Nombre_Cliente='" + nombres.Text + "', Apellidos_Cliente ='" + apellidos.Text + "', DNI_Cliente ='" + Dni.Text + "', Telefono ='" + telefono.Text +  "' where ID_Cliente = '" + Id.Text + "';";
                 MySqlCommand mySqlCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
                 MySqlDataReader reader = mySqlCommand.ExecuteReader();
 
@@ -115,6 +116,25 @@ namespace ProyectoSen.Clases
             catch (Exception ex)
             {
                 MessageBox.Show("No se Reseto los datos de la base de datos, error " + ex.ToString());
+            }
+        }
+        public void BuscarCliente(DataGridView tablaCliente, TextBox nombre)
+        {
+            try
+            {
+                CConexion objetoConexion = new CConexion();
+
+                String query = "Select * from Cliente where DNI_Cliente ='" + nombre.Text + "';" ;
+                tablaCliente.DataSource = null;
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, objetoConexion.establecerConexion());
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                tablaCliente.DataSource = dt;
+                objetoConexion.cerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No  pueba 1 los datos de la base de datos, error " + ex.ToString());
             }
         }
     }

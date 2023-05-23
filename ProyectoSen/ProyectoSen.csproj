@@ -96,6 +96,7 @@
     <Compile Include="Clases\CCliente.cs" />
     <Compile Include="Clases\CConexion.cs" />
     <Compile Include="Clases\CEquipo.cs" />
+    <Compile Include="Clases\CReporte.cs" />
     <Compile Include="Clases\CTecnico.cs" />
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>

@@ -25,6 +25,7 @@ namespace ProyectoSen
             Clases.CTecnico objetoTecnico = new Clases.CTecnico();
             objetoTecnico.guardarTecnico(txtNombre, txtApellido, txtDni,txtTelefono,txtCargo);
             objetoTecnico.mostrarTecnico(dgvTecnico);
+
         }
 
         private void dgvTecnico_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -60,5 +61,7 @@ namespace ProyectoSen
             objetoTecnico.ResetTecnico();
             objetoTecnico.mostrarTecnico(dgvTecnico);
         }
+
+        
     }
 }

@@ -42,12 +42,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReset = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtCargo = new System.Windows.Forms.TextBox();
             this.btnVolver = new System.Windows.Forms.Button();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.lblTelefono = new System.Windows.Forms.Label();
-            this.btnReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTecnico)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -210,6 +210,18 @@
             this.panel1.Size = new System.Drawing.Size(945, 478);
             this.panel1.TabIndex = 13;
             // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnReset.Location = new System.Drawing.Point(788, 8);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(135, 39);
+            this.btnReset.TabIndex = 15;
+            this.btnReset.Text = "RESET";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click_1);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -259,18 +271,6 @@
             this.lblTelefono.TabIndex = 13;
             this.lblTelefono.Text = "TELEFONO";
             // 
-            // btnReset
-            // 
-            this.btnReset.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnReset.Location = new System.Drawing.Point(788, 8);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(135, 39);
-            this.btnReset.TabIndex = 15;
-            this.btnReset.Text = "RESET";
-            this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click_1);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -295,7 +295,6 @@
         private System.Windows.Forms.DataGridView dgvTecnico;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtDni;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnModificar;
@@ -311,6 +310,7 @@
         private System.Windows.Forms.TextBox txtCargo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnReset;
+        public System.Windows.Forms.TextBox txtDni;
     }
 }
 

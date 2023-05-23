@@ -35,7 +35,13 @@ namespace ProyectoSen
         private void btnSave_Click(object sender, EventArgs e)
         {
             Clases.CEquipo objetoEquipo = new Clases.CEquipo();
+            Clases.CReporte objetoReporte = new Clases.CReporte();
+            Form1 tecnico = new Form1();
+            Cliente cliente = new Cliente();
             objetoEquipo.guardarEquipo(cmbTipoE, txtMarca, txtDescripcion);
+            objetoReporte.guardarReporte(tecnico.txtDni, cliente.txtDni, txtMarca);
+            
+            
             objetoEquipo.mostrarEquipo(dgvEquipo);
         }
 
@@ -59,5 +65,6 @@ namespace ProyectoSen
             objetoEquipo.ResetEquipo();
             objetoEquipo.mostrarEquipo(dgvEquipo);
         }
+
     }
 }

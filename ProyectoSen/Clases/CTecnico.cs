@@ -36,7 +36,7 @@ namespace ProyectoSen.Clases
             {
                 CConexion objetoConexion = new CConexion();
 
-                String query = "insert into Tecnico (Nombre,Apellido,Dni,Telefono,Cargo)"+"values ('"+ nombres.Text+ "','"+apellidos.Text+ "','" + Dni.Text + "','" + telefono.Text + "','" + cargo.Text + "');";
+                String query = "insert into Tecnico (Nombre_Tecnico,Apellido_Tecnico,Dni_Tecnico,Telefono_Tecnico,Cargo)"+"values ('"+ nombres.Text+ "','"+apellidos.Text+ "','" + Dni.Text + "','" + telefono.Text + "','" + cargo.Text + "');";
                 MySqlCommand mySqlCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
                 MySqlDataReader reader = mySqlCommand.ExecuteReader();
 
@@ -70,7 +70,7 @@ namespace ProyectoSen.Clases
             {
                 CConexion objetoConexion = new CConexion();
 
-                String query = "update Tecnico set Nombre='" + nombres.Text + "', Apellido='" + apellidos.Text + "', DNI ='" + Dni.Text + "', Telefono ='" + telefono.Text + "', Cargo ='" + cargo.Text + "' where ID_Tecnico = '" + Id.Text+"';";
+                String query = "update Tecnico set Nombre_Tecnico='" + nombres.Text + "', Apellido_Tecnico='" + apellidos.Text + "', DNI_Tecnico ='" + Dni.Text + "', Telefono_Tecnico ='" + telefono.Text + "', Cargo ='" + cargo.Text + "' where ID_Tecnico = '" + Id.Text+"';";
                 MySqlCommand mySqlCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
                 MySqlDataReader reader = mySqlCommand.ExecuteReader();
 
@@ -116,6 +116,25 @@ namespace ProyectoSen.Clases
             catch (Exception ex)
             {
                 MessageBox.Show("No se Reset los datos de la base de datos, error " + ex.ToString());
+            }
+        }
+        public void BuscarTecnico(DataGridView tablaTecnico, TextBox nombre)
+        {
+            try
+            {
+                CConexion objetoConexion = new CConexion();
+
+                String query = "Select * from Tecnico where DNI_Tecnico ='" + nombre.Text + "';";
+                tablaTecnico.DataSource = null;
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, objetoConexion.establecerConexion());
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                tablaTecnico.DataSource = dt;
+                objetoConexion.cerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No  pueba 1 los datos de la base de datos, error " + ex.ToString());
             }
         }
     }

@@ -16,7 +16,16 @@ namespace ProyectoSen
         public Principal()
         {
             InitializeComponent();
-            
+            //-----------------------------------------------------------------------------------------
+            //----            ---          ---            ------        -------------------------------
+            //----   ------------   ----------   ------   -----    ----   -----------------------------
+            //----   ------------   ----------   ------   ----    ------   ----------------------------
+            //----   ------------          ---   ------   ----   --------   ---------------------------
+            //----   --       ---   ----------        --------   --------   ---------------------------
+            //----   -----    ---   ----------   ---   -------    ------   ----------------------------
+            //----   -----    ---   ----------   -----   ------    ----   -----------------------------
+            //----            ---          ---   -------    ----        -------------------------------
+            //-----------------------------------------------------------------------------------------
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
@@ -62,5 +71,47 @@ namespace ProyectoSen
                 lblMessage.Text = "↑ Elija una opcion ↑";
             }
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            Clases.CReporte objetoReporte = new Clases.CReporte();
+            objetoReporte.mostrarReporte(dgvReporte);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if(cmbBuscar.Text == "TECNICO")
+            {
+                Clases.CTecnico objetoReporte = new Clases.CTecnico();
+                objetoReporte.BuscarTecnico(dgvPrincipal,txtBuscar);
+                
+            }
+            
+            if(cmbBuscar.Text == "CLIENTE")
+            {
+                Clases.CCliente objetoReporte = new Clases.CCliente();
+                objetoReporte.BuscarCliente(dgvPrincipal, txtBuscar);
+            }
+        }
+
+        private void btnBuscarR_Click(object sender, EventArgs e)
+        {
+            Clases.CReporte objetoReporte = new Clases.CReporte();
+            objetoReporte.BuscarReporte(dgvReporte,txtBuscarR);
+        }
+
+        private void dgvPrincipal_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            
+                
+            
+
+            
+        }
+
+
+
+        //if nombre == juan que muestre todo sus actividades
+        // que guarde en ambas partes 
     }
 }
